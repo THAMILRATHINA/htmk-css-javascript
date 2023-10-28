@@ -1,0 +1,11 @@
+<results>
+  <result>
+    <code>ICD Code 1</code>
+    <description>Description 1</description>
+  </result>
+  <result>
+    <code>ICD Code 2</code>
+    <description>Description 2</description>
+  </result>
+  <!-- Add more result elements if needed -->
+</results>

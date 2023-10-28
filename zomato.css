@@ -1,0 +1,9 @@
+li{
+    float: left;
+    list-style-type: none;
+}
+.button1{
+    width: 230px;
+    height:40px;
+    padding: 18px;
+}

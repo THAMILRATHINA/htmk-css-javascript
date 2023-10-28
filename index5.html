@@ -1,0 +1,70 @@
+<html>
+<head>
+   <title>HTML Console</title>
+</head>
+<body>
+   <h3> Output Console </h3>
+   <p> Output: </p>
+   <div id="output">
+   </div>
+   <div id="opError" style="color : #ff0000">
+   </div>
+   <script>
+      var content = ''
+      var error = ''
+      var opDiv = document.querySelector('#output')
+      var opErrDiv = document.querySelector('#opError')
+
+      // actual javascript code
+      try {
+         function object(my_proto) {
+            function F() { }
+            F.prototype = my_proto;
+            return new F();
+         }
+         const base2D = {
+            name: '2D region',
+            dimensions: 2
+         };
+         function rect(base2D, w, h) {
+            const obj = object(base2D);
+            obj.name = 'rectangle';
+            obj.calculateArea = function () {
+               return this.width * this.height;
+            };
+            obj.width = w;
+            obj.height = h;
+            return obj;
+         }
+         function circ(base2D, r) {
+            const obj = object(base2D);
+            obj.name = 'circle';
+            obj.calculateArea = function () {
+               return 3.14159 * this.rad * this.rad;
+            };
+            obj.rad = r;
+            return obj;
+         }
+         const rectObj = rect(base2D, 5, 7);
+         content += "The rectangle object: " + JSON.stringify(rectObj) + '<br>'
+         content += "The area of rectangle: " + JSON.stringify(rectObj.calculateArea()) + '<br>'
+         const circObj = circ(base2D, 10);
+         content += "The circle object: " + JSON.stringify(circObj) + '<br>'
+         content += "The area of the circle: " + JSON.stringify(circObj.calculateArea()) + '<br>'
+      }
+      catch (err) {
+         error += err
+      }
+      finally {
+
+         // display on output console
+         opDiv.innerHTML = content
+         opErrDiv.innerHTML = error
+      }
+   </script>
+</body>
+</html>  
+</script>  
+
+    </body>
+</html>

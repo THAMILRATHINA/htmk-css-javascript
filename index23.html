@@ -1,0 +1,113 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <style>
+        #clock {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #333;
+            border-radius: 50%;
+            
+        }
+    </style>
+</head>
+<body>
+    <canvas id="clock"></canvas>
+    <script>
+        // Get the canvas element
+        const canvas = document.getElementById("clock");
+        const context = canvas.getContext("2d");
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+
+        // Function to draw the clock face
+        function drawClockFace() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw clock circle
+            context.beginPath();
+            context.arc(centerX, centerY, 90, 0, 2 * Math.PI);
+            context.strokeStyle = "#333";
+            context.lineWidth = 4;
+            context.stroke();
+
+            // Draw clock center
+            context.beginPath();
+            context.arc(centerX, centerY, 5, 0, 2 * Math.PI);
+            context.fillStyle = "#333";
+            context.fill();
+        }
+
+        // Function to draw clock hands
+        function drawClockHands() {
+            const now = new Date();
+            const hours = now.getHours() % 12;
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            // Draw hour hand
+            const hourAngle = (hours + minutes / 60) * 30; // 360 degrees / 12 hours = 30 degrees per hour
+            drawHand(hourAngle, 50, 6, "#333");
+
+            // Draw minute hand
+            const minuteAngle = (minutes + seconds / 60) * 6; // 360 degrees / 60 minutes = 6 degrees per minute
+            drawHand(minuteAngle, 70, 4, "#333");
+
+            // Draw second hand
+            const secondAngle = seconds * 6; // 360 degrees / 60 seconds = 6 degrees per second
+            drawHand(secondAngle, 80, 2, "red");
+        }
+
+        // Function to draw a clock hand
+        function drawHand(angle, length, width, color) {
+            context.save();
+            context.translate(centerX, centerY);
+            context.rotate((angle - 90) * (Math.PI / 180));
+            context.beginPath();
+            context.moveTo(0, 0);
+            context.lineTo(length, 0);
+            context.strokeStyle = color;
+            context.lineWidth = width;
+            context.lineCap = "round";
+            context.stroke();
+            context.restore();
+        }
+
+        // Function to update the clock
+        function updateClock() {
+            drawClockFace();
+            drawClockHands();
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+
+        // Initial clock draw
+        updateClock();
+    </script>
+</body>
+</html> -->
+
+    <html>
+<head>
+<title>Javascript Method toExponential()</title>
+</head>
+
+<body>
+<script> 
+function showcommentform() {  
+var data="Name:<br><input type='text' name='name'><br>Comment:<br><textarea rows='5' cols='50'></textarea><br><input type='submit' value='comment'>";  
+  document.getElementById('mylocation').innerHTML=data;  
+ }  
+</script>
+<form name="myForm">
+<input type="button" value="comment" onclick="showcommentform()">
+<div id="mylocation"></div>
+</form>
+
+</body>
+</html>
+

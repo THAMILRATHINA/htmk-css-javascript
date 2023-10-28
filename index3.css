@@ -1,0 +1,28 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:green;
+    height:40px;
+
+}
+li{
+    float: left;
+    
+}
+li a{
+    display:inline;
+    color: aliceblue;
+    padding: 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color:black;
+    height: 80px;
+
+}
+.bi-geo-alt-fill{
+    color: white;
+ background: linear-gradient(red,green);
+}

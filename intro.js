@@ -1,0 +1,1 @@
+alert("JavaScript is a simple language for developing Client Side Applications");  

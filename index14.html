@@ -1,0 +1,134 @@
+<!-- <html>
+<head>
+<script>
+function getValue()
+{
+var retVal = prompt("Enter your name : ","your name here");
+               document.write("You have entered : "+ retVal);
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" value="Click Me" onclick="getValue();"/>
+</form>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 1000px;
+    background-color:green;
+}
+li a {
+    display: inline-block;
+    float: left;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+li a.active {
+    background-color:red;
+    color: white;
+}
+li a:hover:not(.active) {
+    background-color:green;
+    color: white;
+}
+</style>
+</head>
+<body>
+<h2>Vertical Navigation Bar</h2>
+<p>In this example, we create an "active" class with a green background color and a white text. The class is added to the "Home" link.</p>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</body>
+</html>
+ -->
+<!-- <!DOCTYPE html>
+ <html>
+ <head>
+ <style>
+ ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: #333;
+ }
+ li {
+     float: left;
+ }
+ li a {
+     display: block;
+     color: white;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+ }
+ li a:hover:not(.active) {
+     background-color: #111;
+ }
+ .active {
+     background-color: #4CAF50;
+ }
+ </style>
+ </head>
+ <body>
+ <ul>
+   <li><a class="active" href="#home">Home</a></li>
+   <li><a href="#news">News</a></li>
+   <li><a href="#contact">Contact</a></li>
+   <li><a href="#about">About</a></li>
+ </ul>
+ </body>
+ </html>
+  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Hoverable Dropdown</h2>
+    <p>Move the mouse over the text below to open the dropdown content.</p>
+    <div class="dropdown">
+        <span>Mouse over me</span>
+        <div class="dropdown-content">
+            <p>Hello World!</p>
+        </div>
+    </div>
+</body>
+
+</html>
